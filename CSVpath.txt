@@ -1,0 +1,664 @@
+dim_funding
+ 
+"vwams_micoe_gl_data_gb_h": "{{int_rv_mnt_path}}/hubs/vwams_micoe_gl_data_gb_h",
+
+"vwams_micoe_gl_data_gb": "{{bz_mnt_path}}/internal/iddi/ftdw/ldm_prod/vwams_micoe_gl_data_gb",
+
+"ams_micoe_volume_agreement_gb": "{{bz_mnt_path}}/confidential/iddi/ftdw/ldm_prod_hs/ams_micoe_volume_agreement_gb",
+
+"ams_micoe_fixed_agreement_gb": "{{bz_mnt_path}}/confidential/iddi/ftdw/ldm_prod_hs/ams_micoe_fixed_agreement_gb"
+ 
+--------------------------------------------------------;
+ 
+fact_allocation_item_funding
+ 
+"Basis_ItemFunding_Month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_funding_month",
+
+"Basis_ItemFunding_IPLFunding": "{{csv_mnt_path}}/supplier_funding/Basis_ItemFunding_IPLFunding.csv",
+
+"dim_item": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_item/",
+
+"Basis_ItemSalesAndCOS_Month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month/",           
+
+"Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreItem": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_item/",
+
+"Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreSupplierDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_supplier_department/",
+
+"Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreTradingDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_trading_department/",
+
+"Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStore":"{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store/",
+
+"supplier_funding_cost_components": "{{eim_mnt_path}}/business/internal/infoMart/facts/Fct_Item_Store_Mth_Supp_Funded_Cost_Compnts/"
+ 
+-----------------------------------------------------------;
+ 
+fact_als
+ 
+            "handballing_adjustment": "{{csv_mnt_path}}/Basis_ALSWarehouse_HandballingAdjustment.csv",
+
+            "warehouse_owr": "{{csv_mnt_path}}/Basis_ALSWarehouse_OWR.csv",
+
+            "og_postcodelatlongs": "{{csv_mnt_path}}/Basis_OnlineGrocery_PostcodeLatLongs.csv",
+
+            "depot_hierarchy": "{{csv_mnt_path}}/Depot Hierarchy.csv",
+
+            "depot_postcodes": "{{csv_mnt_path}}/DepotPostcodes.csv",
+
+            "depots": "{{csv_mnt_path}}/Depots.csv",
+
+            "gl_mapping": "{{csv_mnt_path}}/GL_Mapping.csv",
+
+            "hub_warehouse_alignments": "{{csv_mnt_path}}/HubWarehouseAlignments.csv",
+
+            "dim_depot": "{{csv_mnt_path}}/dim_depot.csv",
+
+            "store_post_code": "{{csv_mnt_path}}/store_post_code.csv",
+
+            "item_versioned_history" : "{{csv_mnt_path}}/item_versioned_history",
+
+            "dim_store": "{{im_mnt_path}}/dimensions/dim_store",
+
+            "dim_item": "{{im_mnt_path}}/dimensions/dim_item",
+
+            "dim_calendar_day": "{{im_mnt_path}}/dimensions/dim_calendar_day",
+
+            "sku_dly_ship": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_vm/sku_dly_ship",            
+
+            "Basis_ItemSalesAndCOS_Month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month",            
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreItem": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_item",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreSupplierDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_supplier_department",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreTradingDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_trading_department",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStore": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store",
+
+            "basis_item_sales_and_cos_fulfilment_route": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_basis_item_sales_and_cos_fulfilment_route",
+
+            "item_versioned_history": "{{landing_mnt_path}}/item_versioned_history",
+
+            "Basis_CostLineValues_PC": "{{landing_mnt_path}}/als_csvs/Basis_CostLineValues_PC",
+
+            "Basis_item_sales_and_cos_fulfilment_route_month": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_basis_item_sales_and_cos_fulfilment_route",
+
+            "als_transport_ship_outputPath":"{{im_mnt_path}}/facts/agg_als_transport_ships",
+
+            "als_outputPath": "{{im_mnt_path}}/facts/fact_item_store_mth_als_cost_components/",
+
+            "als_agg_allocation_als_transport_cost_variable_hub": "{{im_mnt_path}}/facts/agg_allocation_als_transport_cost_variable_hub",
+
+            "als_agg_allocation_als_transport_cost_variable_spoke": "{{im_mnt_path}}/facts/agg_allocation_als_transport_cost_variable_spoke",
+
+            "als_agg_allocation_als_warehouse_cost_variable_spoke": "{{im_mnt_path}}/facts/agg_allocation_als_warehouse_cost_variable_spoke",
+
+            "als_agg_allocation_als_warehouse_cost_variable_hub": "{{im_mnt_path}}/facts/agg_allocation_als_warehouse_cost_variable_hub"
+ 
+---------------------------------------------------;
+ 
+fact_basis_item_funding
+ 
+	    "fact_supplier_funding": "{{int_im_mnt_path}}/facts/fact_supplier_funding/",
+
+            "dim_calendar":"{{int_im_mnt_path}}/dimensions/dim_calendar_day/",
+
+            "dim_store":"{{int_im_mnt_path}}/dimensions/dim_store/",
+
+            "dim_item":"{{int_im_mnt_path}}/dimensions/dim_item/",
+
+            "dim_funding_agreement":"{{int_im_mnt_path}}/dimensions/dim_funding_agreement/",
+
+            "outputPath": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_funding",
+
+            "basis_item_funding_month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_funding_month"
+ 
+ 
+----------------------------------------------------;
+
+ 
+fact_basis_item_sales
+ 
+ 
+ 
+"dim_item_versioned": "{{bz_mnt_path}}/internal/iddi/ftdw/ldm_prod_td_gb_wm_vm/item_versioned",
+
+            "item_vat_percent": "{{bz_mnt_path}}/internal/iddi/ftdw/ldm_prod_td_gb_wm_vm/vwitem_vat_percent",
+
+            "online_order_header_h": "{{eim_mnt_path}}/business/confidential/rawVault/hubs/online_order_header_h/",
+
+            "eic_order_details_table": "{{bz_mnt_path}}/confidential/iddi/ftdw/ldm_prod_oracle/mtep_eic_order_details/",
+
+            "online_order_line_mtep_oracle_s": "{{eim_mnt_path}}/business/confidential/rawVault/satellites/online_order_line_mtep_oracle_s/",
+
+            "online_order_line_skey_mtep_oracle_s": "{{eim_mnt_path}}/business/confidential/rawVault/satellites/online_order_line_skey_mtep_oracle_s/",
+
+            "online_order_line_l": "{{eim_mnt_path}}/business/confidential/rawVault/links/online_order_line_l/",
+
+            "online_order_header_h": "{{eim_mnt_path}}/business/confidential/rawVault/hubs/online_order_header_h/",
+
+            "online_order_shipping_oracle_s": "{{eim_mnt_path}}/business/confidential/rawVault/satellites/online_order_shipping_oracle_s/",
+
+            "online_order_shipping_l": "{{eim_mnt_path}}/business/confidential/rawVault/links/online_order_shipping_l/",
+
+            "store_info_store_transaction_l": "{{eim_mnt_path}}/business/internal/rawVault/links/store_info_store_transaction_l/",
+
+            "store_info_store_transaction_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/store_info_store_transaction_teradata_s/",
+
+            "scan_store_info_item_visit_l": "{{eim_mnt_path}}/business/internal/rawVault/links/scan_store_info_item_visit_l/",
+
+            "scan_store_info_item_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/scan_store_info_item_visit_teradata_s/",
+
+            "store_info_scan_visit_l": "{{eim_mnt_path}}/business/internal/rawVault/links/store_info_scan_visit_l/",
+
+            "store_info_scan_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/store_info_scan_visit_teradata_s/",
+
+            "store_info_visit_l": "{{eim_mnt_path}}/business/internal/rawVault/links/store_info_visit_l/",
+
+            "store_info_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/store_info_visit_teradata_s/",
+
+            "store_info_h": "{{eim_mnt_path}}/business/internal/rawVault/hubs/store_info_h/",
+
+            "mtep_dim_order_header": "{{bz_mnt_path}}/confidential/iddi/oracle/mtepwdata/mtep_dim_order_header/",
+
+            "dim_item_desc" : "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_item_desc",
+
+            "item_hierarcy": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_item_hierarchy",
+
+            "scan_teradata":  "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_vm/scan/",
+
+            "store_transaction" : "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_vm/store_transaction/",
+
+            "visit_teradata": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_vm/visit/",
+
+            "fact_article_item_gtin_uom_bp": "{{eim_mnt_path}}/business/internal/infoMart/facts/fact_article_item_gtin_uom_bp/",
+
+            "item_versioned_history":  "{{landing_mnt_path}}/item_versioned_history",
+
+            "MarkupMarkDown":  "{{landing_mnt_path}}/store_generic/MarkupMarkDown.csv", 
+
+            "Order_header_table": "{{bz_mnt_path}}/confidential/iddi/oracle/mtepwdata/mtep_dim_order_header/",
+
+            "dim_item":  "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_item/",
+
+            "item_unit_cost_price_history": "{{eim_mnt_path}}/business/internal/infoMart/facts/item_unit_cost_prices_history",
+
+            "og_store": "{{eim_mnt_path}}/business/internal/infoMart/facts/og_stores",
+
+            "basis_item_sales_and_cos_fulfilment_route": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_basis_item_sales_and_cos_fulfilment_route",
+
+            "fulfilmentroute_month_final": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_route_participation",
+
+            "transactions": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_store_sales_transactions",
+
+            "teradata_visit_mapping": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_teradata_visit_mapping",
+
+            "output_online_groceries": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_online_groceries",
+
+            "output_fulfilment_routes_month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month",
+
+            "output_fulfilmentroute_month_store": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store",
+
+            "output_fulfilmentroute_month_store_item": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_item",
+
+            "output_supplier_department": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_supplier_department",
+
+            "output_trading_department": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_trading_department"
+
+ 
+Fact_online_grocery
+ 
+ 
+ 
+"item_versioned_history" : "{{csv_mnt_path}}/item_versioned_history",
+
+            "dim_store": "{{im_mnt_path}}/dimensions/dim_store",
+
+            "dim_item": "{{im_mnt_path}}/dimensions/dim_item",
+
+            "dim_calendar_day": "{{im_mnt_path}}/dimensions/dim_calendar_day",
+
+            "sku_dly_ship": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_vm/sku_dly_ship",            
+
+            "Basis_ItemSalesAndCOS_Month": "{{im_mnt_path}}/facts/",            
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreItem": "{{im_mnt_path}}/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreSupplierDepartment": "{{im_mnt_path}}/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_supplier_department/",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreTradingDepartment": "{{im_mnt_path}}/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_trading_department/",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStore": "{{im_mnt_path}}/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store",
+
+            "Basis_item_sales_and_cos_online_groceries": "{{im_mnt_path}}/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_online_groceries",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRoute": "{{im_mnt_path}}/facts/agg_fulfilment_route",
+
+            "Basis_item_sales_and_cos_fulfilment_route_month": "{{im_mnt_path}}/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month/",
+
+            "Basis_StoreWages_RMIAdjustments": "{{csv_mnt_path}}/Basis_StoreWages_RMIAdjustments.csv",
+
+            "Basis_OnlineGrocery_WageRates": "{{csv_mnt_path}}/Basis_OnlineGrocery_WageRates.csv",
+
+            "Basis_StoreWages_TaskPlan": "{{csv_mnt_path}}/Basis_StoreWages_TaskPlan.csv",
+
+            "Basis_StoreWages_TaskMapping": "{{csv_mnt_path}}/Basis_StoreWages_TaskMapping.csv",
+
+            "Basis_StoreWages_ReplenRates": "{{csv_mnt_path}}/Basis_StoreWages_ReplenRates.csv",
+
+            "MarkUpMarkDown": "{{landing_mnt_path}}/store_generic/MarkupMarkDown.csv",
+
+            "Dim_TradingHierachy": "{{landing_mnt_path}}/store_wages_csv/Dim_TradingHierarchy.csv",
+
+            "item_versioned_history": "{{landing_mnt_path}}/item_versioned_history",
+
+            "Basis_CostLineValues_PC": "{{csv_mnt_path}}/Basis_CostLineValues_PC.csv",
+
+            "Basis_CostLineHierarchies_PC": "{{landing_mnt_path}}/store_wages_csv/Basis_CostLineHierarchies_PC.csv",
+
+            "cust_refund_order_product_currency_colleague_store_l": "{{int_rv_mnt_path}}/links/cust_refund_order_product_currency_colleague_store_l",
+
+            "csc_refunds_oracle_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/csc_refunds_oracle_s",
+
+            "csc_refund_category_oracle_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/csc_refund_category_oracle_s/",
+
+            "eic_order_details_table": "{{bz_mnt_path}}/confidential/iddi/ftdw/ldm_prod_oracle/mtep_eic_order_details/",
+
+            "online_order_line_mtep_oracle_s": "{{eim_mnt_path}}/business/confidential/rawVault/satellites/online_order_line_mtep_oracle_s/",
+
+            "order_header": "{{bz_mnt_path}}/confidential/iddi/oracle/mtepwdata/mtep_dim_order_header/",
+
+            "item_vat_percent": "{{bz_mnt_path}}/internal/iddi/ftdw/ldm_prod_td_gb_wm_vm/vwitem_vat_percent",
+
+            "product_h": "{{bz_mnt_path}}/business/internal/rawVault/hubs/product_h/",
+
+            "mtep_dim_product_oracle_s": "{{bz_mnt_path}}/internal/iddi/oracle/mtepwdata/mtep_dim_product/",
+
+            "mtep_dim_day": "{{bz_mnt_path}}/internal/iddi/oracle/mtepwdata/mtep_dim_day/",
+
+            "scan_store_info_item_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/scan_store_info_item_visit_teradata_s/",
+
+            "Basis_CostLineValues_CC": "{{csv_mnt_path}}/Basis_CostLineValues_CC.csv",
+
+            "OracleDW_MTEP_FACT_USED_VOUCHERS" : "{{csv_mnt_path}}/OracleDW_MTEP_FACT_USED_VOUCHERS.csv",
+
+            "Basis_OnlineGrocery_PickDuration" : "{{csv_mnt_path}}/Basis_OnlineGrocery_PickDuration",
+
+            "Basis_OnlineGrocery_Fleet_FuelCost": "{{csv_mnt_path}}/Basis_OnlineGrocery_Fleet_FuelCost.csv",
+
+            "Basis_OnlineGrocery_Chargebacks": "{{csv_mnt_path}}/Basis_OnlineGrocery_Chargebacks.csv",
+
+            "Basis_CarrierBags_CascadeBagsSplit": "{{csv_mnt_path}}/Basis_CarrierBags_CascadeBagsSplit.csv",
+
+            "Basis_OnlineGrocery_SMSCosts": "{{csv_mnt_path}}/Basis_OnlineGrocery_SMSCosts.csv",
+
+            "Basis_OnlineGrocery_AMP_Salesforce": "{{csv_mnt_path}}/Basis_OnlineGrocery_AMP_Salesforce.csv",
+
+            "Basis_OnlineGrocery_AMP_Salesforce_CentralSuppliers": "{{csv_mnt_path}}/Basis_OnlineGrocery_AMP_Salesforce_CentralSuppliers.csv",
+
+            "Basis_OnlineGrocery_AMP_Criteo": "{{csv_mnt_path}}/Basis_OnlineGrocery_AMP_Criteo.csv",
+
+            "Basis_store_wages_cost_groups": "{{im_mnt_path}}/facts/agg_basis_store_wages_cost_groups/",
+
+            "Basis_StoreWages_RMIAdjustments": "{{sw_csv_mnt_path}}/Basis_StoreWages_RMIAdjustments.csv",
+
+            "Basis_OnlineGrocery_WageRates": "{{sw_csv_mnt_path}}/Basis_OnlineGrocery_WageRates.csv",
+
+            "Basis_OnlineGrocery_Fleet_LeasingInvoices": "{{csv_mnt_path}}/Basis_OnlineGrocery_Fleet_LeasingInvoices.csv",
+
+            "Basis_OnlineGrocery_Fleet_MaintenanceDamages": "{{csv_mnt_path}}/Basis_OnlineGrocery_Fleet_MaintenanceDamages.csv",
+
+            "Basis_OnlineGrocery_Fleet_MaintenanceFixed": "{{csv_mnt_path}}/Basis_OnlineGrocery_Fleet_MaintenanceFixed.csv",
+
+            "Basis_OnlineGrocery_HSCClickAndCollectOperating_GLMapping": "{{csv_mnt_path}}/Basis_OnlineGrocery_HSCClickAndCollectOperating_GLMapping.csv",
+
+            "Basis_OnlineGrocery_HSCClickAndCollectOperating_Overlay": "{{csv_mnt_path}}/Basis_OnlineGrocery_HSCClickAndCollectOperating_Overlay.csv",
+
+            "Basis_OnlineGrocery_Insurance_Overlay": "{{csv_mnt_path}}/Basis_OnlineGrocery_Insurance_Overlay.csv",
+
+            "Basis_OnlineGrocery_Marketing_Overlay": "{{csv_mnt_path}}/Basis_OnlineGrocery_Marketing_Overlay.csv",
+
+            "mdse_catg_desc_mdse_subcatg_desc_l": "{{int_rv_mnt_path}}/links/mdse_catg_desc_mdse_subcatg_desc_l/",
+
+            "store_post_code": "{{landing_mnt_path}}/als_csvs/store_post_code.csv",
+
+            "basis_online_grocery_journel_model": "{{landing_mnt_path}}/online_groceries_csv/Basis_OnlineGrocery_JourneyModel.csv",
+
+            "Basis_OnlineGrocery_SalaryCost": "{{landing_mnt_path}}/online_groceries_csv/Basis_OnlineGrocery_SalaryCost.csv",
+
+            "Basis_OnlineGrocery_BadDebt_Overlay": "{{landing_mnt_path}}/online_groceries_csv/Basis_OnlineGrocery_BadDebt_Overlay.csv",
+
+            "agg_teradata_visit_mapping": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_teradata_visit_mapping/",
+
+            "dim_basis_item_sales_and_cos_fulfilment_route": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_basis_item_sales_and_cos_fulfilment_route/",
+
+            "Basis_OnlineGrocery_BadDebt_Overlay": "{{landing_mnt_path}}/online_groceries_csv/Basis_OnlineGrocery_BadDebt_Overlay.csv",
+
+            "Basis_OnlineGrocery_PostcodeMapping": "{{csv_mnt_path}}/Basis_OnlineGrocery_PostcodeMapping.csv",
+
+            "Basis_OnlineGrocery_PostcodeLatLongs": "{{landing_mnt_path}}/als_csvs/Basis_OnlineGrocery_PostcodeLatLongs.csv",
+
+            "Basis_online_groceries_marshallingrates": "{{csv_mnt_path}}/Basis_OnlineGrocery_MarshallingRates.csv",
+
+            "Basis_online_groceries_property_overlay": "{{csv_mnt_path}}/Basis_OnlineGrocery_Property_Overlay.csv",
+
+            "mtep_delivery_schedule": "{{bz_mnt_path}}/confidential/iddi/oracle/mtepwdata/mtep_fact_delivery_schedule",
+
+            "mtep_fact_csc_refunds": "{{bz_mnt_path}}/internal/iddi/oracle/mtepwdata/mtep_fact_csc_refunds",
+
+            "mtep_dim_voucher_promotions": "{{bz_mnt_path}}/internal/iddi/oracle/mtepwdata/mtep_dim_voucher_promotions/",
+
+            "Basis_OnlineGrocery_OrdersWithoutSubsAndNIls": "{{csv_mnt_path}}/Basis_OnlineGrocery_OrdersWithoutSubsAndNils.csv",
+
+            "online_grocery_path": "{{im_mnt_path}}/facts/fact_item_store_mth_online_grocery_cost_components/",
+
+            "basis_journey_model_path" :"{{im_mnt_path}}/facts/agg_basis_journey_model"
+ 
+Fact_store_generic
+ 
+ 
+"general_ledger_account_h": "{{int_rv_mnt_path}}/hubs/general_ledger_account_h",
+
+            "general_ledger_actuals_sap_s": "{{int_rv_mnt_path}}/satellites/general_ledger_actuals_sap_s",
+
+            "general_ledger_actuals_l": "{{int_rv_mnt_path}}/links/general_ledger_actuals_l",
+
+            "profit_center_h": "{{int_rv_mnt_path}}/hubs/profit_center_h",
+
+            "cost_center_h": "{{int_rv_mnt_path}}/hubs/cost_center_h",
+
+            "item_store_info_sku_ty_dly_mumd_teradata_s": "{{int_rv_mnt_path}}/satellites/item_store_info_sku_ty_dly_mumd_teradata_s",
+
+            "item_store_info_sku_ty_dly_mumd_l": "{{int_rv_mnt_path}}/links/item_store_info_sku_ty_dly_mumd_l",
+
+            "Basis_OnlineGrocery_DAASCommission": "{{csv_mnt_path}}/Basis_OnlineGrocery_DAASCommission.csv",
+
+            "Basis_PurchaseAdjustments_Exceptional": "{{csv_mnt_path}}/Basis_PurchaseAdjustments_Exceptional.csv",
+
+            "Basis_RetailCosts_StoreShrink_Department": "{{csv_mnt_path}}/basis_retails_cost_store_shrink_department.csv",            
+
+            "MarkUpMarkDown": "{{csv_mnt_path}}/MarkupMarkDown.csv",
+
+            "item_store_info_pi_sku_adjustment_l": "{{int_rv_mnt_path}}/links/item_store_info_pi_sku_adjustment_l/",
+
+            "item_store_info_pi_sku_adjustment_teradata_s": "{{int_rv_mnt_path}}/satellites/item_store_info_pi_sku_adjustment_teradata_s/",
+
+            "pi_sku_adjustment" :"{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_vm/pi_sku_adjustment/",
+
+            "dim_item_desc" : "{{im_mnt_path}}/dimensions/dim_item_desc",
+
+            "item_hierarcy": "{{im_mnt_path}}/dimensions/dim_item_hierarchy",
+
+            "store_info_h": "{{int_rv_mnt_path}}/hubs/store_info_h/",
+
+            "store_info_teradata_s": "{{conf_rv_mnt_path}}/satellites/store_info_teradata_s/",
+
+            "store_department": "{{enh_mnt_path}}/business/internal/iddi/teradata/gb_wm_vm/store_department/",
+
+            "Basis_ItemFunding_IPLFunding": "{{csv_mnt_path}}/supplier_funding/basis_item_funding_IPL_Funding.csv",
+
+            "Basis_OnlineGroery_Fleet_RemoteSiteMapping": "{{csv_mnt_path}}/basis_online_grocery_fleet_remotesitemapping.csv",
+
+            "dim_item": "{{int_rv_mnt_path}}/dimensions/dim_item/", 
+
+            "Basis_item_sales_and_cos_fulfilment_route_month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_route_participation/",      
+
+            "Basis_ItemSalesAndCOS_FulfilmentRoute": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_basis_item_sales_and_cos_fulfilment_route/", 
+
+            "Basis_ItemSalesAndCOS_Month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month/",           
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreItem": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_item/",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreSupplierDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_supplier_department/",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreTradingDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_trading_department/",
+
+            "coupon_scan" : "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_vm/coupon_scan/",
+
+            "teradata_visit_mapping" : "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_teradata_visit_mapping/",
+
+            "scan_teradata":  "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_vm/scan/",
+
+            "visit_tender": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_secure/visit_tender",     
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStore":"{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store/",
+
+            "ix_spc_fixture" : "{{bz_mnt_path}}/internal/blueyonder/blueyonder/ckb/ix_spc_fixture/",
+
+            "ix_spc_position" : "{{bz_mnt_path}}/internal/blueyonder/blueyonder/ckb/ix_spc_position/",
+
+            "ix_spc_product" : "{{bz_mnt_path}}/internal/blueyonder/blueyonder/ckb/ix_spc_product/",
+
+            "ix_spc_planogram" : "{{bz_mnt_path}}/internal/blueyonder/blueyonder/ckb/ix_spc_planogram/",
+
+            "outputpath": "{{im_mnt_path}}/facts/fact_item_store_mth_generic_cost_components/"
+
+ 
+Fact_store_wages
+ 
+ 
+"item_versioned_history" : "{{csv_mnt_path}}/item_versioned_history",
+
+            "dim_store": "{{im_mnt_path}}/dimensions/dim_store",
+
+            "dim_item": "{{im_mnt_path}}/dimensions/dim_item",
+
+            "dim_calendar_day": "{{im_mnt_path}}/dimensions/dim_calendar_day",
+
+            "sku_dly_ship": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_vm/sku_dly_ship",            
+
+            "Basis_ItemSalesAndCOS_Month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month/", 
+
+            "Basis_ItemSalesAndCOS_fulfilment_route_Month": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_route_participation/",            
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreItem": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_item",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreSupplierDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_supplier_department",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStoreTradingDepartment": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store_trading_department",
+
+            "Basis_ItemSalesAndCOS_FulfilmentRouteParticipation_MonthStore": "{{eim_mnt_path}}/business/internal/infoMart/facts/agg_basis_item_sales_and_cos_fulfilment_routes_participation_month_store",
+
+            "Basis_item_sales_and_cos_fulfilment_route": "{{eim_mnt_path}}/business/internal/infoMart/dimensions/dim_basis_item_sales_and_cos_fulfilment_route",
+
+            "Basis_StoreWages_RMIAdjustments": "{{csv_mnt_path}}/Basis_StoreWages_RMIAdjustments.csv",
+
+            "Basis_OnlineGrocery_WageRates": "{{csv_mnt_path}}/Basis_OnlineGrocery_WageRates.csv",
+
+            "Basis_StoreWages_TaskPlan": "{{csv_mnt_path}}/Basis_StoreWages_TaskPlan.csv",
+
+            "Basis_StoreWages_TaskMapping": "{{csv_mnt_path}}/Basis_StoreWages_TaskMapping.csv",
+
+            "Basis_StoreWages_ReplenRates": "{{csv_mnt_path}}/Basis_StoreWages_ReplenRates.csv",
+
+            "MarkUpMarkDown": "{{landing_mnt_path}}/store_generic/MarkupMarkDown.csv",
+
+            "Dim_TradingHierachy": "{{landing_mnt_path}}/store_wages_csv/Dim_TradingHierarchy.csv",
+
+            "item_versioned_history": "{{landing_mnt_path}}/item_versioned_history",
+
+            "Basis_CostLineValues_PC": "{{landing_mnt_path}}/als_csvs/Basis_CostLineValues_PC",
+
+            "Basis_CostLineHierarchies_PC": "{{landing_mnt_path}}/store_wages_csv/Basis_CostLineHierarchies_PC.csv",
+
+            "div_dept": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_vm/division_dept",
+
+            "visit_tender": "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_secure/visit_tender",            
+
+            "general_ledger_account_h": "{{int_rv_mnt_path}}/hubs/general_ledger_account_h",
+
+            "general_ledger_actuals_sap_s": "{{int_rv_mnt_path}}/satellites/general_ledger_actuals_sap_s",
+
+            "general_ledger_actuals_l": "{{int_rv_mnt_path}}/links/general_ledger_actuals_l",
+
+            "profit_center_h": "{{int_rv_mnt_path}}/hubs/profit_center_h",
+
+            "cost_center_h": "{{int_rv_mnt_path}}/hubs/cost_center_h",
+
+            "scan_store_info_item_visit_l": "{{eim_mnt_path}}/business/internal/rawVault/links/scan_store_info_item_visit_l/",
+
+            "scan_store_info_item_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/scan_store_info_item_visit_teradata_s/",
+
+            "store_info_scan_visit_l": "{{eim_mnt_path}}/business/internal/rawVault/links/store_info_scan_visit_l/",
+
+            "store_info_scan_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/store_info_scan_visit_teradata_s/",
+
+            "store_info_visit_l": "{{eim_mnt_path}}/business/internal/rawVault/links/store_info_visit_l/",
+
+            "store_info_visit_teradata_s": "{{eim_mnt_path}}/business/internal/rawVault/satellites/store_info_visit_teradata_s/",
+
+            "store_info_h": "{{eim_mnt_path}}/business/internal/rawVault/hubs/store_info_h/",
+
+            "mtep_dim_order_header": "{{bz_mnt_path}}/confidential/iddi/oracle/mtepwdata/mtep_dim_order_header/",
+
+            "scan_teradata":  "{{bz_mnt_path}}/internal/iddi/teradata/gb_wm_mb_vm/scan/",            
+
+            "store_wage_checkouts_scan_key_items_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_checkouts_scan_key_items_cost",
+
+            "store_wage_checkouts_scan_key_plu_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_checkouts_scan_key_plu_cost",
+
+            "store_wage_checkouts_scan_other_items_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_checkouts_scan_other_items_cost",
+
+            "store_wage_checkouts_scan_security_detag_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_checkouts_scan_security_detag_cost",
+
+            "store_wage_checkouts_scan_items_weighing_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_checkouts_scan_items_weighing_cost",
+
+            "store_wage_hosting_allowance_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_hosting_allowance_cost",
+
+            "store_wage_selfscan_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wage_selfscan_cost",
+
+            "allocation_online_grocery": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_online_grocery",
+
+            "allocation_store": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_store",
+
+            "allocation_online_proportional": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_online_proportional",
+
+            "allocation_online_grocery_store": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_online_grocery_store",
+
+            "allocation_store_store": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_store_store",
+
+            "allocation_proportional_store": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_proportional_store",
+
+            "allocation_final_sweep": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unallocated_task_staging/allocation_final_sweep",
+
+            "store_wages_unalloactedtask_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_unalloactedtask_cost",
+
+            "storewage_replen_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_storewage_replen_cost",
+
+            "store_wages_datecodes_waste_and_MD_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_store_wages_datecodes_waste_and_MD_cost",
+
+            "store_wages_month_wage_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_fact_item_store_month_wage_cost_components",
+
+            "mainbank_kpi": "{{im_mnt_path}}/facts/tmp_store_wages/agg_",
+
+            "checkouts_process_cash_payment_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_checkouts_process_cash_payment_cost",
+
+            "checkouts_process_payment_colleague_discount_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_checkouts_process_payment_colleague_discount_cost",
+
+            "checkouts_process_coupon_payment_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_checkouts_process_coupon_payment_cost",
+
+            "checkouts_process_card_payment_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_checkouts_process_card_payment_cost",
+
+            "checkouts_process_gift_card_payment_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_checkouts_process_gift_card_payment_cost",
+
+            "checkouts_process_savings_card_payment_cost": "{{im_mnt_path}}/facts/tmp_store_wages/agg_checkouts_process_savings_card_payment_cost",
+
+            "deleting_work_tables": "{{im_mnt_path}}/facts/tmp_store_wages",   
+
+            "cost_groups_output_path": "{{im_mnt_path}}/facts/agg_basis_store_wages_cost_groups",   
+
+            "store_wages_output_path": "{{eim_mnt_path}}/business/internal/infoMart/facts/fact_item_store_month_wage_cost_components"
+
+ 
+Fact_supplier_funding
+ 
+"ams_micoe_fixed_agreement_gb_mdse_catg_desc_l": "{{conf_rv_mnt_path}}/links/ams_micoe_fixed_agreement_gb_mdse_catg_desc_l",
+
+            "ams_micoe_fixed_agreement_gb_dept_l": "{{conf_rv_mnt_path}}/links/ams_micoe_fixed_agreement_gb_dept_l",
+
+            "ams_micoe_fixed_agreement_gb_ftdw_s": "{{conf_rv_mnt_path}}/satellites/ams_micoe_fixed_agreement_gb_ftdw_s",
+
+            "vwams_micoe_gl_data_gb_h": "{{int_rv_mnt_path}}/hubs/vwams_micoe_gl_data_gb_h",
+
+            "vwams_micoe_gl_data_gb": "{{enh_mnt_path}}/business/internal/iddi/ftdw/ldm_prod/vwams_micoe_gl_data_gb",
+
+            "ams_micoe_volume_agreement_gb": "{{enh_mnt_path}}/business/confidential/iddi/ftdw/ldm_prod_hs/ams_micoe_volume_agreement_gb",
+
+            "ams_micoe_fixed_agreement_gb": "{{enh_mnt_path}}/business/confidential/iddi/ftdw/ldm_prod_hs/ams_micoe_fixed_agreement_gb",
+
+            "dept_vp_h": "{{int_rv_mnt_path}}/hubs/dept_vp_h",
+
+            "store_info_h": "{{int_rv_mnt_path}}/hubs/store_info_h/",
+
+            "store_info_teradata_s": "{{conf_rv_mnt_path}}/satellites/store_info_teradata_s",
+
+            "item_h": "{{int_rv_mnt_path}}/hubs/item_h",
+
+            "item_teradata_s": "{{int_rv_mnt_path}}/satellites/item_teradata_s",
+
+            "item_item_desc_dept_vp_vendor_master_l": "{{int_rv_mnt_path}}/links/item_item_desc_dept_vp_vendor_master_l",
+
+            "item_item_desc_teradata_s": "{{int_rv_mnt_path}}/satellites/item_item_desc_teradata_s",
+
+            "item_item_vat_percent_teradata_s": "{{int_rv_mnt_path}}/satellites/item_item_vat_percent_teradata_s",
+
+            "brand_h": "{{int_rv_mnt_path}}/hubs/brand_h",
+
+            "brand_text_db2_s": "{{int_rv_mnt_path}}/satellites/brand_text_db2_s",
+
+            "brand_teradata_s": "{{int_rv_mnt_path}}/satellites/brand_teradata_s",
+
+            "calendar_h": "{{int_rv_mnt_path}}/hubs/calendar_h",
+
+            "calendar_ref": "{{landing_mnt_path}}/calendar_ref/calendar_ref.parquet",
+
+            "calendar_teradata_s": "{{int_rv_mnt_path}}/satellites/calendar_teradata_s",
+
+            "item_store_info_sku_ty_dly_mumd_l": "{{int_rv_mnt_path}}/links/item_store_info_sku_ty_dly_mumd_l",
+
+            "item_store_info_sku_ty_dly_mumd_teradata_s": "{{int_rv_mnt_path}}/satellites/item_store_info_sku_ty_dly_mumd_teradata_s",
+
+            "mumd_event_h": "{{int_rv_mnt_path}}/hubs/mumd_event_h",
+
+            "mumd_event_teradata_s": "{{int_rv_mnt_path}}/satellites/mumd_event_teradata_s",
+
+            "item_store_info_sku_dly_pos_teradata_s": "{{int_rv_mnt_path}}/satellites/item_store_info_sku_dly_pos_teradata_s",
+
+            "item_store_info_sku_dly_pos_l": "{{int_rv_mnt_path}}/links/item_store_info_sku_dly_pos_l",
+
+            "item_versioned": "{{enh_mnt_path}}/business/internal/iddi/ftdw/ldm_prod_td_gb_wm_vm/item_versioned",
+
+            "item_vat_percent": "{{enh_mnt_path}}/business/internal/iddi/ftdw/ldm_prod_td_gb_wm_vm/vwitem_vat_percent",
+
+            "vwsku_dly_pos_unpivot_adj": "{{enh_mnt_path}}/internal/iddi/ftdw/ldm_prod_td_gb_wm_vm/vwsku_dly_pos_unpivot_adj",
+
+            "mdse_catg_desc_h": "{{int_rv_mnt_path}}/hubs/mdse_catg_desc_h",
+
+            "itm_fnln_mdse_div_diet_crsh_vndr_brnd_dept_sn_l": "{{int_rv_mnt_path}}/links/itm_fnln_mdse_div_diet_crsh_vndr_brnd_dept_sn_l",
+
+            "vendor_master_h": "{{int_rv_mnt_path}}/hubs/vendor_master_h",  
+
+            "dim_item": "{{int_im_mnt_path}}/dimensions/dim_item/",
+
+            "item_versioned_history": "{{landing_mnt_path}}//item_versioned_history",
+
+            "supplier_funding_master": "{{int_im_mnt_path}}/facts/fact_supplier_funding",
+
+            "storesales_itemstore": "{{int_im_mnt_path}}/facts/tmp_sf/agg_storesales_itemstore",
+
+            "supplier_funding_cos_participation": "{{int_im_mnt_path}}/facts/tmp_sf/agg_supplier_funding_cos_participation",
+
+            "funding_agreements_amsvolume": "{{int_im_mnt_path}}/facts/tmp_sf/agg_funding_agreements_amsvolume",
+
+            "supplier_funding_volume": "{{int_im_mnt_path}}/facts/tmp_sf/agg_supplier_funding_volume",
+
+            "funding_agreements_amsfixed": "{{int_im_mnt_path}}/facts/tmp_sf/agg_funding_agreements_amsfixed",
+
+            "supplier_funding_fixed_mdse": "{{int_im_mnt_path}}/facts/tmp_sf/agg_supplier_funding_fixed_mdse",
+
+            "funding_agreements_amsfixed_dept": "{{int_im_mnt_path}}/facts/tmp_sf/agg_funding_agreements_amsfixed_dept",
+
+            "supplier_funding_fixed_dept": "{{int_im_mnt_path}}/facts/tmp_sf/agg_supplier_funding_fixed_dept",
+
+            "deleting_work_tables": "{{int_im_mnt_path}}/facts/tmp_sf"
+ 
+ 
